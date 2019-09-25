@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+     <!-- Site Metas -->
+    <title>Lagerhaus</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <meta name="google-signin-client_id" content="546982520252-8m30l7bqgvseps4jk8amofupmsd7s83q.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Colors CSS -->
+    <link rel="stylesheet" href="css/colors.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      .g-signin2
+      {
+        color: red;
+        width: 490px;
+      }
+    </style>
+</head>
+<body class="realestate_version">
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+<section>
+       <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="images/logos/logo1.png" alt="image" height = "90" width = '120' ></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/"><%= user.p_fname %></a></li>
+                        
+                        <li><a class="active"  href="/properties">Warehouses</a></li>
+                        <li><a href="/gallery">Gallery</a></li>                    
+                        <li><a href="/service">Service</a></li> 
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a  href="/about">About us </a></li>
+                        <li class="btn btn-danger btn-sm"><a class="btn btn-danger btn-sm" href="/logout" >Logout</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</section>
+    <section><ul class='slideshow'>
+		<li>
+			<span>Summer</span>
+		</li>
+		<li>
+			<span>Fall</span>
+		</li>
+		<li>
+			<span>Winter</span>
+		</li>
+		<li>
+			<span>Spring</span>
+        </li>
+        
+    </ul>
+    <div class="parallax first-section">
+    <div class="container">
+        <div class="row">
+                <div class="col-md-6 wow slideInRight">
+                    <div class="contact_form">
+                        <h3><i class="fa fa-user"></i> Add Warehouse</h3>
+                        <form id="contactform1" action="/addwarehouse" class="row" name="contactform" method="post">
+                            <fieldset class="row-fluid">
+
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <input pattern=".{5,20}" required type="text" name="warehouseTitle" id="fname" class="form-control" placeholder="Warehouse Title">
+                              </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <input pattern=".{5,20}" required type="number" name="warehousePhone" id="email1" class="form-control" placeholder="Contact Number">
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <textarea pattern=".{15,100}" required placeholder="Warehouse Description" name="warehouseDescription" class="form-control" > </textarea>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <input pattern=".{5,20}" required type="number" name="warehouseRent" id="email1" class="form-control" placeholder="Rent">
+                                </div>
+                                
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <input pattern=".{5,20}" required type="email" name="warehousePaymentType" id="email1" class="form-control" placeholder="Monthly or Yearly">
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                    <button type="submit" value="SEND" id="submit1" class="btn btn-light btn-radius btn-brd grd1 btn-block">Register Warehouse</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                      <!-- </br> -->
+                    </div>
+                </div>
+            </div><!-- end row -->
+            </div>
+        </div><!-- end container -->
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <img src="images/logos/logo-realestate.png" alt="">
+                        </div>
+                        <p> Lagerhaus is a storage platform for consumers and business. It provides safe and secure storage options for consumers looking to rent space.</p>
+                        <p></p>
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Info Link</h3>
+                        </div>
+
+                        <ul class="twitter-widget footer-links">
+                            <li><a href="#"> Home </a></li>
+                            <li><a href="#"> About Us </a></li>
+                            <li><a href="#"> Services</a></li>
+							<li><a href="#"> Gallery</a></li>
+							<li><a href="#"> Properties</a></li>
+							<li><a href="#"> Contact</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+				<div class="col-md-3 col-sm-3 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contact Details</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">info@lagerhaus.com</a></li>
+                            <li><a href="#">www.lagerhaus.com</a></li>
+                            <li>Christ University, Bangalore</li>
+                            <li>+91 7737112219</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+                <div class="col-md-2 col-sm-2 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Social</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fa fa-github"></i> Github</a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i> Dribbble</a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i> Pinterest</a></li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">Lagerhaus</a> Design By : <a href="https://html.design/">Somya Abichandani</a></p>
+                </div>
+
+                <div class="footer-right">
+                    <form method="get" action="#">
+                        <input placeholder="Subscribe our newsletter.." name="search">
+                        <i class="fa fa-envelope-o"></i>
+                    </form>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/hoverdir.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+   <!-- MAP & CONTACT -->
+    <script src="js/map.js"></script>
+
+</body>
+</html>
